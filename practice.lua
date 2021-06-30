@@ -1,12 +1,13 @@
 -------------[[ LUA PRACTICE ]]------------
 
--- Messing around with global variable
+-- Messing around with global variable, practically useless lol
 messageCalls = 0;
 
 --[[
   Prints out a message
   Takes in a string name, string message, and numbered amount of times
-  you want this message to print to console
+  you want this message to print to console.
+  Returns i parameter mutliplied by 10, for some reason
 ]]
 function message(name, message, i)
   for count = 0, i do
@@ -31,9 +32,10 @@ function printLogs()
 end
 
 --[[
-  Creates an array with each index multiplied by some multiplier
-  Takes in a number size of the array and a number multiplier
-  to multiply each element by
+  Creates an array with each index multiplied by some multiplier.
+  Takes in a number size of the array and a number multiplier.
+  to multiply each element by.
+  Returns generated array.
 ]]
 function createMultipliedArray(size, multiplier)
   local array = {}
@@ -48,7 +50,8 @@ end
 --[[
   Since Lua has no way to get the size of an array as a table,
   this function will get the array size.
-  Takes in a table called array
+  Takes in a table called array.
+  Returns the size of that array.
 ]]
 function getArraySize(array)
   local count = 0
@@ -61,9 +64,10 @@ function getArraySize(array)
 end
 
 --[[
-  Reverses the values of an inputted array
-  Takes in an array represented as a table and the size of the array
-  Size can also be an index to reverse the array up to
+  Reverses the values of an inputted array.
+  Takes in an array represented as a table and the size of the array.
+  Size can also be an index to reverse the array up to.
+  Returns a new array which is the inputted array, reversed.
 ]]
 function reverseArray(array, size)
   local newArray = {}
@@ -81,8 +85,8 @@ function reverseArray(array, size)
 end
 
 --[[
-  Prints out an inputted array
-  Takes in an array represented as a table
+  Prints out an inputted array.
+  Takes in an array represented as a table.
 ]]
 function printArray(array)
   for _, value in pairs(array) do
